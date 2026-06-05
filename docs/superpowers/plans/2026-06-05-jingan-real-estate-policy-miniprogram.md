@@ -4,7 +4,7 @@
 
 **Goal:** Build a first usable version that generates static Jing'an real estate policy summary data locally, hosts it through GitHub Pages, and displays it in a WeChat Mini Program.
 
-**Architecture:** The local collector is a Node.js CLI that reads config, gathers candidate articles, filters and ranks them, and writes `public/data/policies.json`. GitHub Pages serves the static JSON. The Mini Program fetches that JSON, renders list/detail views, filters by source type, and provides reliable copy-link behavior.
+**Architecture:** The local collector is a Node.js CLI that reads config, gathers candidate articles, filters and ranks them, and writes `data/policies.json`. GitHub Pages serves the static JSON. The Mini Program fetches that JSON, renders list/detail views, filters by source type, and provides reliable copy-link behavior.
 
 **Tech Stack:** Node.js 20+ built-in `node:test`, native `fetch`, CommonJS scripts, static JSON, native WeChat Mini Program WXML/WXSS/JS.
 
@@ -21,7 +21,7 @@
 - `scripts/collector/collect.js`: CLI entrypoint that gathers source items and writes static JSON.
 - `scripts/collector/sources/manual.js`: first-version source adapter using curated seed items and fetchable URLs.
 - `tests/collector/*.test.js`: Node tests for collector behavior.
-- `public/data/policies.json`: generated static data consumed by GitHub Pages and the Mini Program.
+- `data/policies.json`: generated static data consumed by GitHub Pages and the Mini Program.
 - `miniprogram/app.json`: Mini Program route config.
 - `miniprogram/app.js`: global app bootstrap.
 - `miniprogram/app.wxss`: global styles.
@@ -509,7 +509,7 @@ git commit -m "feat: add policy relevance ranking"
 - Create: `scripts/collector/schema.js`
 - Create: `scripts/collector/sources/manual.js`
 - Create: `scripts/collector/collect.js`
-- Create: `public/data/policies.json`
+- Create: `data/policies.json`
 - Test: `tests/collector/schema.test.js`
 - Test: `tests/collector/collect.test.js`
 
@@ -718,7 +718,7 @@ const { rankAndLimitItems } = require('./relevance');
 const { validatePoliciesData } = require('./schema');
 const { collectManualSources } = require('./sources/manual');
 
-const DEFAULT_OUTPUT = path.join(process.cwd(), 'public', 'data', 'policies.json');
+const DEFAULT_OUTPUT = path.join(process.cwd(), 'data', 'policies.json');
 
 function buildPoliciesData(items, config, now) {
   return validatePoliciesData({
@@ -775,7 +775,7 @@ module.exports = {
 
 - [ ] **Step 7: Add initial generated JSON**
 
-Create `public/data/policies.json`:
+Create `data/policies.json`:
 
 ```json
 {
@@ -798,14 +798,14 @@ npm test
 npm run validate:data
 ```
 
-Expected: PASS and `Validated /Users/weijia/codexWorkspace/toyProject/public/data/policies.json`.
+Expected: PASS and `Validated /Users/weijia/codexWorkspace/toyProject/data/policies.json`.
 
 - [ ] **Step 9: Commit**
 
 Run:
 
 ```bash
-git add scripts/collector/schema.js scripts/collector/sources/manual.js scripts/collector/collect.js tests/collector/schema.test.js tests/collector/collect.test.js public/data/policies.json
+git add scripts/collector/schema.js scripts/collector/sources/manual.js scripts/collector/collect.js tests/collector/schema.test.js tests/collector/collect.test.js data/policies.json
 git commit -m "feat: generate static policy data"
 ```
 
@@ -1406,7 +1406,7 @@ Run locally:
 ```bash
 npm run collect
 npm run validate:data
-git add public/data/policies.json
+git add data/policies.json
 git commit -m "data: update policy summaries"
 git push
 ```

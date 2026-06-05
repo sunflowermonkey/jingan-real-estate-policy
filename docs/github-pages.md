@@ -25,7 +25,7 @@ Run locally:
 ```bash
 npm run collect
 npm run validate:data
-git add public/data/policies.json
+git add data/policies.json
 git commit -m "data: update policy summaries"
 git push
 ```

@@ -42,7 +42,7 @@ The local collector runs on the user's computer. It reads a configuration file, 
 
 The collector writes:
 
-- `public/data/policies.json`
+- `data/policies.json`
 - Optional logs for skipped sources, parse failures, and generated item counts.
 
 The first version uses manual execution. The user runs the collector when they want to refresh the data, then pushes the generated files to GitHub.
@@ -103,7 +103,7 @@ The UI must not describe the range as configurable. It only displays the actual 
 
 ## Data Model
 
-`public/data/policies.json` has this shape:
+`data/policies.json` has this shape:
 
 ```json
 {
@@ -268,7 +268,7 @@ Collector checks:
 
 Static data checks:
 
-- `public/data/policies.json` can be opened in a browser.
+- `data/policies.json` can be opened in a browser.
 - `meta.generatedAt` and `meta.lookbackDays` exist.
 - JSON is valid and encoded as UTF-8.
 
