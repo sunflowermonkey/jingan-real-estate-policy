@@ -1,6 +1,6 @@
 const { filterPolicies, formatMetaLine, sourceTypeLabel } = require('../../utils/policies');
 
-const DATA_URL = 'https://sunflowermonkey.github.io/jingan-real-estate-policy/data/policies.json';
+const DATA_URL = 'https://sunflowermonkey.github.io/jingan-real-estate-policy/policies.json';
 
 Page({
   data: {

@@ -15,7 +15,7 @@ This project uses GitHub Pages to host static generated data for the WeChat Mini
 The expected data URL is:
 
 ```text
-https://sunflowermonkey.github.io/jingan-real-estate-policy/data/policies.json
+https://sunflowermonkey.github.io/jingan-real-estate-policy/policies.json
 ```
 
 ## Update Data
@@ -25,7 +25,7 @@ Run locally:
 ```bash
 npm run collect
 npm run validate:data
-git add data/policies.json
+git add policies.json
 git commit -m "data: update policy summaries"
 git push
 ```

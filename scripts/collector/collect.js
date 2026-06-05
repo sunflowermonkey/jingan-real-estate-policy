@@ -6,7 +6,7 @@ const { validatePoliciesData } = require('./schema');
 const { collectManualSources } = require('./sources/manual');
 const { collectDiscoverySources } = require('./sources/discovery');
 
-const DEFAULT_OUTPUT = path.join(process.cwd(), 'data', 'policies.json');
+const DEFAULT_OUTPUT = path.join(process.cwd(), 'policies.json');
 
 function buildPoliciesData(items, config, now) {
   return validatePoliciesData({

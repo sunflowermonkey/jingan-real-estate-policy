@@ -42,7 +42,7 @@ The local collector runs on the user's computer. It reads a configuration file, 
 
 The collector writes:
 
-- `data/policies.json`
+- `policies.json`
 - Optional logs for skipped sources, parse failures, and generated item counts.
 
 The first version uses manual execution. The user runs the collector when they want to refresh the data, then pushes the generated files to GitHub.
@@ -54,7 +54,7 @@ GitHub Pages hosts the generated static files over HTTPS. It does not run scrapi
 The expected public data URL is similar to:
 
 ```text
-https://<github-user>.github.io/<repo>/data/policies.json
+https://<github-user>.github.io/<repo>/policies.json
 ```
 
 This URL can later be configured as the Mini Program data source.
@@ -103,7 +103,7 @@ The UI must not describe the range as configurable. It only displays the actual 
 
 ## Data Model
 
-`data/policies.json` has this shape:
+`policies.json` has this shape:
 
 ```json
 {
@@ -268,7 +268,7 @@ Collector checks:
 
 Static data checks:
 
-- `data/policies.json` can be opened in a browser.
+- `policies.json` can be opened in a browser.
 - `meta.generatedAt` and `meta.lookbackDays` exist.
 - JSON is valid and encoded as UTF-8.
 

@@ -4,5 +4,5 @@ const path = require('node:path');
 const { DEFAULT_OUTPUT } = require('../../scripts/collector/collect');
 
 test('collector default output matches GitHub Pages data URL path', () => {
-  assert.equal(DEFAULT_OUTPUT, path.join(process.cwd(), 'data', 'policies.json'));
+  assert.equal(DEFAULT_OUTPUT, path.join(process.cwd(), 'policies.json'));
 });

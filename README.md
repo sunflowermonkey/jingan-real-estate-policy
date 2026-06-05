@@ -23,7 +23,7 @@ npm run validate:data
 After GitHub Pages is enabled:
 
 ```text
-https://sunflowermonkey.github.io/jingan-real-estate-policy/data/policies.json
+https://sunflowermonkey.github.io/jingan-real-estate-policy/policies.json
 ```
 
 ## Docs
