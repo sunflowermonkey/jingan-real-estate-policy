@@ -21,12 +21,19 @@
     {
       "name": "上海发布",
       "type": "authoritative_media",
-      "urls": []
+      "urls": [
+        "https://www.shanghai.gov.cn/nw4411/20260508/45322df284de42e690708e8b7cbcaac0.html",
+        "https://www.shanghai.gov.cn/nw4411/20260510/0880407c3d584803a7e3e34d8497543d.html",
+        "https://www.shanghai.gov.cn/nw17239/20260423/db84274a588149309032977a3df7f916.html",
+        "https://www.shanghai.gov.cn/nw4411/20260317/eba52e7aa6ff468581e571fcd1d28907.html"
+      ]
     },
     {
       "name": "静安区政府",
       "type": "official_policy",
-      "urls": []
+      "urls": [
+        "https://www.jingan.gov.cn/govxxgk/JA0/2026-02-06/3c0dbaf8-8806-4b2b-aac2-a7caf4b3454d.html?type=2"
+      ]
     }
   ]
 }

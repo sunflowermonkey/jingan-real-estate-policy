@@ -2,8 +2,82 @@
   "meta": {
     "region": "上海市静安区",
     "lookbackDays": 90,
-    "generatedAt": "2026-06-05T08:31:03.449Z",
+    "generatedAt": "2026-06-05T08:47:45.435Z",
     "sourceProfile": "official_plus_authoritative"
   },
-  "items": []
+  "items": [
+    {
+      "id": "1ae7805782d6a05a",
+      "title": "市房管局局长做客“民生访谈” 加大供给 政策发力 减轻青年租房负担",
+      "sourceName": "上海发布",
+      "sourceType": "authoritative_media",
+      "publishedAt": "2026-05-08",
+      "url": "https://www.shanghai.gov.cn/nw4411/20260508/45322df284de42e690708e8b7cbcaac0.html",
+      "summary": "静安区供合家项目，就由低效商办楼改建，提供310套精装房源，平均租金约5800元/月。去年7月运营至今，入住率超90%，服务静安70多家重点企业人才。 “我们正在研究普惠性青年安居政策，计划通过企业让利、政府补贴双向发力，进一步减轻青年租房负担。”高世昀表示。 购房市场同样热度高涨。数据显示，楼市“新七条”出台后，政策效应逐步显现。3月以来“小阳春”势头良好",
+      "tags": [
+        "静安相关"
+      ],
+      "matchedKeywords": [
+        "静安",
+        "静安区",
+        "购房"
+      ],
+      "relevanceScore": 0.8
+    },
+    {
+      "id": "345f56e44c42df72",
+      "title": "景观水系新增50公里贯通岸线 “一江一河”将全面升级",
+      "sourceName": "上海发布",
+      "sourceType": "authoritative_media",
+      "publishedAt": "2026-05-10",
+      "url": "https://www.shanghai.gov.cn/nw4411/20260510/0880407c3d584803a7e3e34d8497543d.html",
+      "summary": "城市更新是上海城市建设的一条主线，徐汇西岸、黄浦滨江等知名地标正是通过更新焕发新生的。昨天，上海市住建委主任王桢在《2026上海民生访谈》中表示，今年，上海首次编制城市更新和住房发展&ldquo;十五五&rdquo;规划，并将于近期出台。同时计划出台&ldquo;一江一河&rdquo;发展&ldquo;十五五&rdquo;规划，全面升级黄浦江和苏州河。 &e",
+      "tags": [
+        "城市更新",
+        "住房"
+      ],
+      "matchedKeywords": [
+        "上海",
+        "住房",
+        "城市更新"
+      ],
+      "relevanceScore": 0.53
+    },
+    {
+      "id": "df878fcb3a19f1bd",
+      "title": "上海商办房地产市场迎利好 房贷首付调整为不低于30%",
+      "sourceName": "上海发布",
+      "sourceType": "authoritative_media",
+      "publishedAt": "2026-03-17",
+      "url": "https://www.shanghai.gov.cn/nw4411/20260317/eba52e7aa6ff468581e571fcd1d28907.html",
+      "summary": "房地产市场迎利好 房贷首付调整为不低于30% --> 首页 要闻动态 上海要闻 上海商办房地产市场迎利好 房贷首付调整为不低于30% 2026-03-17 来源：解放日报 字号： 大 中 小 --> &emsp;&emsp;记者 俱鹤飞 &emsp;&emsp;昨天，上海商办房地产市场迎来一项利好政策。中国人民银行上海市分行联合国家金融监督管理总局上海监管局",
+      "tags": [
+        "房贷",
+        "住房"
+      ],
+      "matchedKeywords": [
+        "上海",
+        "房地产",
+        "房贷"
+      ],
+      "relevanceScore": 0.47
+    },
+    {
+      "id": "72fa5d6760144af9",
+      "title": "上海个人居住用房买卖税费全梳理！2026最新政策一文读懂",
+      "sourceName": "上海发布",
+      "sourceType": "authoritative_media",
+      "publishedAt": "2026-04-22",
+      "url": "https://www.shanghai.gov.cn/nw17239/20260423/db84274a588149309032977a3df7f916.html",
+      "summary": "住房涉税政策，此文整理了2026年最新政策内容，涵盖增值税、契税、个税等核心税种，干货满满，建议收藏备用！ 卖方涉税政策（卖房必看）1、增值税：满2年（含2年）免征，不满2年征收率为3% 自2026年1月1日起，《中华人民共和国增值税法》开始实施。增值税最新计税规则如下： 1.满2年（含2年）：免征增值税； 2.不满2年：按3%全额缴纳增值税， 应纳税款=含",
+      "tags": [
+        "住房"
+      ],
+      "matchedKeywords": [
+        "上海",
+        "住房"
+      ],
+      "relevanceScore": 0.43
+    }
+  ]
 }

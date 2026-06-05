@@ -22,7 +22,7 @@ function buildPoliciesData(items, config, now) {
 async function runCollector(options = {}) {
   const now = options.now || new Date();
   const config = options.config || loadConfig(options.configPath);
-  const sourceItems = options.seedItems || await collectManualSources(config);
+  const sourceItems = options.seedItems || await collectManualSources(config, { fetchImpl: options.fetchImpl });
   const items = rankAndLimitItems(sourceItems, config, now);
   const data = buildPoliciesData(items, config, now);
   const outputPath = options.outputPath || DEFAULT_OUTPUT;
