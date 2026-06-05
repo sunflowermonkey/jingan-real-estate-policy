@@ -62,3 +62,24 @@ test('rankAndLimitItems filters by date and relevance, sorts, dedupes, and limit
   assert.ok(items[0].id);
   assert.equal(items[0].url, 'https://example.com/a');
 });
+
+test('rankAndLimitItems rejects weak Shanghai-only rental matches', () => {
+  const now = new Date('2026-06-05T00:00:00+08:00');
+  const items = rankAndLimitItems([
+    {
+      title: '上海电影节票务租赁服务提醒',
+      sourceName: '上海发布',
+      sourceType: 'authoritative_media',
+      publishedAt: '2026-06-05',
+      url: 'https://example.com/ticket',
+      summary: '上海活动提供设备租赁和票务服务。'
+    }
+  ], {
+    lookbackDays: 90,
+    maxArticlesPerRun: 20,
+    regionKeywords: ['上海', '静安', '静安区'],
+    topicKeywords: ['房地产', '住房', '房价波动', '租赁']
+  }, now);
+
+  assert.equal(items.length, 0);
+});

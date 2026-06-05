@@ -4,6 +4,7 @@ const { loadConfig } = require('./config');
 const { rankAndLimitItems } = require('./relevance');
 const { validatePoliciesData } = require('./schema');
 const { collectManualSources } = require('./sources/manual');
+const { collectDiscoverySources } = require('./sources/discovery');
 
 const DEFAULT_OUTPUT = path.join(process.cwd(), 'public', 'data', 'policies.json');
 
@@ -22,7 +23,10 @@ function buildPoliciesData(items, config, now) {
 async function runCollector(options = {}) {
   const now = options.now || new Date();
   const config = options.config || loadConfig(options.configPath);
-  const sourceItems = options.seedItems || await collectManualSources(config, { fetchImpl: options.fetchImpl });
+  const sourceItems = options.seedItems || [
+    ...await collectManualSources(config, { fetchImpl: options.fetchImpl }),
+    ...await collectDiscoverySources(config, { fetchImpl: options.fetchImpl })
+  ];
   const items = rankAndLimitItems(sourceItems, config, now);
   const data = buildPoliciesData(items, config, now);
   const outputPath = options.outputPath || DEFAULT_OUTPUT;

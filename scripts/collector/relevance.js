@@ -33,8 +33,13 @@ function scoreItem(item, config, now) {
   const topicMatches = config.topicKeywords.filter((keyword) => text.includes(keyword));
   if (!regionMatched || topicMatches.length === 0) return null;
 
+  const jinganMatched = text.includes('静安') || text.includes('静安区');
+  const strongTopicMatched = ['房地产', '住房', '购房', '限购', '保障房', '城市更新', '土地', '房贷', '房价', '价格波动', '房价波动']
+    .some((keyword) => text.includes(keyword));
+  if (!jinganMatched && !strongTopicMatched) return null;
+
   let score = 0.3;
-  if (text.includes('静安') || text.includes('静安区')) score += 0.35;
+  if (jinganMatched) score += 0.35;
   if (item.sourceType === 'official_policy') score += 0.2;
   score += Math.min(topicMatches.length * 0.08, 0.25);
   score += Math.max(0, (config.lookbackDays - ageDays) / config.lookbackDays) * 0.1;

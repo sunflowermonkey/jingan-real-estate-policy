@@ -93,5 +93,6 @@ async function collectManualSources(config, options = {}) {
 }
 
 module.exports = {
-  collectManualSources
+  collectManualSources,
+  fetchArticle
 };

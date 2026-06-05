@@ -14,12 +14,22 @@ test('validateConfig accepts the default collector shape', () => {
         type: 'authoritative_media',
         urls: ['https://example.com/a']
       }
+    ],
+    discoverySources: [
+      {
+        name: '上海市政府要闻',
+        type: 'authoritative_media',
+        pages: ['https://example.com/news/'],
+        allowedHosts: ['example.com'],
+        maxLinks: 20
+      }
     ]
   });
 
   assert.equal(config.lookbackDays, 90);
   assert.equal(config.maxArticlesPerRun, 20);
   assert.deepEqual(config.regionKeywords, ['上海', '静安', '静安区']);
+  assert.equal(config.discoverySources[0].pages[0], 'https://example.com/news/');
 });
 
 test('validateConfig rejects invalid limits', () => {

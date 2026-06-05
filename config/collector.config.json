@@ -35,5 +35,27 @@
         "https://www.jingan.gov.cn/govxxgk/JA0/2026-02-06/3c0dbaf8-8806-4b2b-aac2-a7caf4b3454d.html?type=2"
       ]
     }
+  ],
+  "discoverySources": [
+    {
+      "name": "上海市政府要闻",
+      "type": "authoritative_media",
+      "pages": [
+        "https://www.shanghai.gov.cn/nw4411/index.html",
+        "https://www.shanghai.gov.cn/nw17239/index.html"
+      ],
+      "allowedHosts": ["www.shanghai.gov.cn"],
+      "maxLinks": 40
+    },
+    {
+      "name": "静安区政府公开",
+      "type": "official_policy",
+      "pages": [
+        "https://www.jingan.gov.cn/rmtzx/003001/index.html",
+        "https://www.jingan.gov.cn/govxxgk/JA0/index.html"
+      ],
+      "allowedHosts": ["www.jingan.gov.cn"],
+      "maxLinks": 40
+    }
   ]
 }
