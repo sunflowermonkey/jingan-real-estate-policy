@@ -1,0 +1,13 @@
+<view class="page">
+  <view wx:if="{{error}}" class="state">{{error}}</view>
+
+  <view wx:else class="detail">
+    <view class="title">{{item.title}}</view>
+    <view class="meta muted">{{item.sourceName}} · {{item.publishedAt}} · {{sourceTypeText}}</view>
+    <view class="tags">
+      <text wx:for="{{item.tags}}" wx:key="*this" class="tag">{{item}}</text>
+    </view>
+    <view class="summary">{{item.summary}}</view>
+    <button class="copy" bindtap="onCopyLink">复制原文链接</button>
+  </view>
+</view>

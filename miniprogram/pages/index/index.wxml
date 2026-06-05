@@ -1,0 +1,31 @@
+<view class="page">
+  <view class="header">
+    <view class="title">静安房产政策速览</view>
+    <view class="meta muted">{{metaLine}}</view>
+  </view>
+
+  <view class="filters">
+    <block wx:for="{{filters}}" wx:key="key">
+      <button
+        class="filter {{activeFilter === item.key ? 'active' : ''}}"
+        bindtap="onFilterTap"
+        data-filter="{{item.key}}"
+      >{{item.label}}</button>
+    </block>
+  </view>
+
+  <view wx:if="{{loading}}" class="state">加载中...</view>
+  <view wx:elif="{{error}}" class="state">{{error}}</view>
+  <view wx:elif="{{visibleItems.length === 0}}" class="state">最近 {{lookbackDays}} 天暂无匹配内容</view>
+
+  <view wx:else class="list">
+    <view wx:for="{{visibleItems}}" wx:key="id" class="card" bindtap="onItemTap" data-id="{{item.id}}">
+      <view class="card-title">{{item.title}}</view>
+      <view class="card-meta muted">{{item.sourceName}} · {{item.publishedAt}} · {{item.sourceTypeText}}</view>
+      <view class="summary">{{item.summary}}</view>
+      <view class="tags">
+        <text wx:for="{{item.tags}}" wx:key="*this" class="tag">{{item}}</text>
+      </view>
+    </view>
+  </view>
+</view>

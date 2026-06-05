@@ -1,0 +1,32 @@
+{
+  "lookbackDays": 90,
+  "maxArticlesPerRun": 20,
+  "regionKeywords": ["上海", "静安", "静安区"],
+  "topicKeywords": [
+    "住房",
+    "房地产",
+    "购房",
+    "限购",
+    "租赁",
+    "物业",
+    "保障房",
+    "城市更新",
+    "土地",
+    "房贷",
+    "房价",
+    "价格波动",
+    "房价波动"
+  ],
+  "sources": [
+    {
+      "name": "上海发布",
+      "type": "authoritative_media",
+      "urls": []
+    },
+    {
+      "name": "静安区政府",
+      "type": "official_policy",
+      "urls": []
+    }
+  ]
+}
