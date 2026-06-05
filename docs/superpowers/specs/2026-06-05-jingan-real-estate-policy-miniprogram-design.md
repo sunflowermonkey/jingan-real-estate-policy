@@ -18,6 +18,7 @@ In scope:
 - Local, manually run collection script.
 - Default data range of the most recent 90 days.
 - Configurable lookback range through a local configuration file.
+- Maximum of 20 collected articles per run.
 - GitHub Pages-hosted static JSON.
 - WeChat Mini Program list and detail views.
 - Filtering by source type: all, official policy, authoritative interpretation.
@@ -73,6 +74,7 @@ Example:
 ```json
 {
   "lookbackDays": 90,
+  "maxArticlesPerRun": 20,
   "regionKeywords": ["上海", "静安", "静安区"],
   "topicKeywords": [
     "住房",
@@ -128,6 +130,8 @@ The UI must not describe the range as configurable. It only displays the actual 
 }
 ```
 
+The collector also limits each run to `maxArticlesPerRun` items. The first version defaults to 20 items per run.
+
 Required item fields:
 
 - `id`
@@ -157,6 +161,12 @@ Time filtering:
 
 - Include items published within the configured `lookbackDays`.
 - The first version defaults to 90 days.
+
+Quantity limit:
+
+- Limit each collector run to the configured `maxArticlesPerRun`.
+- The first version defaults to 20 items.
+- Apply relevance sorting before the limit so the final JSON keeps the most relevant official and authoritative items.
 
 Region filtering:
 
@@ -249,9 +259,11 @@ Invalid JSON:
 Collector checks:
 
 - Reads `lookbackDays` from config.
+- Reads `maxArticlesPerRun` from config.
 - Outputs valid JSON.
 - Ensures all required item fields exist.
 - Filters items outside the configured time range.
+- Outputs no more than the configured item limit.
 - Produces valid empty-state JSON when no items match.
 
 Static data checks:
